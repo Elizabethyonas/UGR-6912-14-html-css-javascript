@@ -30,14 +30,72 @@
     font-family: Verdana, sans-serif;
     font-size: 0.8em;
 }
+
+.slider{
+	max-width: 700px;
+	margin:80px auto;
+	position: relative;
+	overflow: hidden;
+}
+.slider .left-slide,.slider .right-slide{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: #444444;
+    border-radius: 50%;
+    color:#ffffff;
+    font-size: 20px;
+    top:50%;
+    cursor: pointer;
+    margin-top: -20px;
+    text-align: center;
+    line-height: 40px;
+    
+  }
+  .slider .left-slide:hover,.slider .right-slide:hover{
+   box-shadow: 0px 0px 10px black;
+   background-color: #0b1318;
+  }
+  
+  .slider .left-slide{
+      left: 30px;
+  }
+  .slider .right-slide{
+	right: 30px;
+} 
+
+.slider .Sliding__ProfileImage .profileImage__photo{
+	display: none;
+	position: relative;
+}
+.slider .Sliding__ProfileImage .profileImage__photo img{
+	max-width: 100%;
+	display: block;
+	animation: zoom 1s ease;
+}
+@keyframes zoom{
+    0%{transform: scale(2);opacity: 0}
+	50%{transform: scale(2); opacity:1}
+	100%{transform: scale(1);opacity:1}
+}
+
+.slider .Sliding__ProfileImage .profileImage__photo.active{
+	display: block;
+
+}
 .profileImage{
+
+    display: flex;
     margin-left: auto;
     margin-right: auto;
-    width: 40%; 
 }
 .profileImage__photo{
     border-radius: 2em;
     width: 200px;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    box-shadow: 5px 5px rgb(27, 26, 26);
+    
 }
 .paragraph{
     border: solid;
@@ -144,20 +202,27 @@ a:hover, a:active {
     margin: 0.5em;
     padding: 0.3em;
 }
-.image__i1{
+
+
+.image__Greece__i1{
     width: 20em;
-    height: 10em;
+    height: 15em;
     margin-right: 1em;
-    border: 5px solid #968383;
+    margin-bottom: 1em;
+    box-shadow: 5px 5px rgb(27, 26, 26);
     border-radius: 1em;
 }
-.image__i2{
+
+.image__Paris__i2{
     width: 20em;
-    height: 10em;
-    margin-left: 1em;
-    border: 5px solid #968383;
+    height: 15em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    box-shadow: 5px 5px rgb(27, 26, 26);
     border-radius: 1em;
 }
+
+
 /*Projects page*/
 .project__details{
     display: flex;
